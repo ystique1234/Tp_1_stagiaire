@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{# {% block title %}Liste des recettes{% endblock %} #}
+{% block title "Liste des stagiaires" %}
+
+
+{% block body %}
+<h3>Bienvenue dans la liste des stagiaires</h3>
+<ul>
+   {% for stagiaire in stagiaires %}
+     <li>
+        <a href={{ path('app_stagiaire_show', {id: stagiaire.id, slug: stagiaire.nom|lower })}}>{{ stagiaire.nom|lower  }}</a>
+        {% else %}
+        <p> pas encore de stagiaire</p>
+        {% endfor %}
+        </li>
+    </ul>
+{% endblock %}

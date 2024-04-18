@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %}{{slug}}{% endblock %}
+
+{% block body %}
+
+<h3>  voici l'identification de chaque stagiaire {{id}}<h3>
+<p> Nom {{stagiaire.Nom}}</p>
+<p> Prenom {{stagiaire.prenom}}</p>
+<p> Adresse {{stagiaire.Adresse}}</p>
+<p> Age {{stagiaire.Age}}</p>
+<p> Email {{stagiaire.email}}</p>
+<p> Date de naissance {{stagiaire.DateOfBirth|date('d-m-y')}}</p>
+{% endblock %}
